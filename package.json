@@ -1,0 +1,18 @@
+{
+  "name": "technicaldocumentation",
+  "version": "1.0.0",
+  "description": "Technical documentation with a sidebar and scrollable content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "technical",
+    "documentation"
+  ],
+  "author": "Pav Cieslak",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.5.0"
+  }
+}
