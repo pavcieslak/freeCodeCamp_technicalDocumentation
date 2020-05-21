@@ -1,0 +1,150 @@
+/* ===================================
+name:      freeCodeCamp - Technical documentation
+version:   1.0.0
+date:      21/05/2020
+author:    Pav Cieslak
+email:     contact@lucmedia.pl
+website:   lucmedia.pl
+=================================== */
+
+/* Variables
+=================================== */
+$headerTagsGlobalScaleBy: 2;
+$sidebarToMainWidth: 320px;
+$niceBlue: rgb(0, 131, 238);
+$niceBlueHover: rgb(0, 98, 179);
+
+/* Imports 
+=================================== */
+@import 'reset';
+* {box-sizing: border-box; padding: 0; margin: 0;}
+img {width: 100%; height: auto; vertical-align: bottom;}
+
+/* Global
+=================================== */
+
+html {font-size: 10px; scroll-behavior: smooth;}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #333;
+  text-rendering: optimizeLegibility;
+  letter-spacing: normal;
+}
+
+/* Layout
+=================================== */
+#navbar, #main-doc {padding: 3rem;}
+
+#navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: $sidebarToMainWidth;
+  height: 100%;
+  background: rgb(220,220,220);
+  background: url('https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2602&q=50') no-repeat  center;
+  background-size: cover;
+  color: #333;
+  header {
+    margin-bottom: 3rem;
+    font-weight: 500;
+    img {
+      max-width: 100px;
+    }
+  }
+  ul li {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    a {
+      color: inherit;
+      text-decoration: inherit;
+      &:hover {
+        font-weight: 600;
+      }
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid rgb(180,180,180);
+    }
+  }
+}
+
+#main-doc {
+  margin-left: $sidebarToMainWidth;
+  section {
+    max-width: 920px;
+    header {
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+      border-bottom: 1px solid rgb(180,180,180);
+    }
+  }
+  a {
+    color: $niceBlue;
+    &:hover {
+      color: $niceBlueHover;
+    }
+  }
+  section:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  ul li span {
+    font-weight: 500; min-width: 300px; display: inline-block;
+  }
+  .list p  {
+    text-indent: -17px;
+    margin-left: 17px;
+  }
+}
+
+figure {text-align: center; margin-bottom: 3rem;}
+figcaption {padding: 1rem; font-size: 1.4rem;}
+
+/* Typography
+=================================== */
+h1 {font-size: calc(8rem/#{$headerTagsGlobalScaleBy});}
+h2 {font-size: calc(5rem/#{$headerTagsGlobalScaleBy});}
+h3 {font-size: calc(3rem/#{$headerTagsGlobalScaleBy});}
+h4 {font-size: calc(2rem/#{$headerTagsGlobalScaleBy});}
+h5 {font-size: calc(1rem/#{$headerTagsGlobalScaleBy});}
+h6 {font-size: calc(1rem/#{$headerTagsGlobalScaleBy});}
+code {padding: 3rem; display: inline-block; background: rgb(245,245,245); color: #333; margin: 3rem;}
+
+
+/* Media
+=================================== */
+
+@media(max-width: 991px) {
+  #navbar, #main-doc {padding: 1.5rem;}
+  #navbar {
+    position: relative;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    ul li {
+      justify-content: center;
+    }
+  }
+  #main-doc {
+    margin: 0;
+    section {
+      max-width: 100%;
+    }
+    ul li {
+      font-size: 1.3rem;
+    }
+    ul li:not(:last-of-type), ul li:not(:first-of-type)  {
+      margin: .5rem 0;
+    }
+    ul li span {
+      font-weight: 500; min-width: 230px; display: inline;
+    }
+  }
+  code {margin: 2rem 1rem; padding: 1.5rem;}
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+  }
+}

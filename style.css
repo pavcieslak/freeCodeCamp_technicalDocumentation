@@ -1,0 +1,255 @@
+/* ===================================
+name:      freeCodeCamp - Technical documentation
+version:   1.0.0
+date:      21/05/2020
+author:    Pav Cieslak
+email:     contact@lucmedia.pl
+website:   lucmedia.pl
+=================================== */
+/* Variables
+=================================== */
+/* Imports 
+=================================== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* Global
+=================================== */
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.8;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #333;
+  text-rendering: optimizeLegibility;
+  letter-spacing: normal;
+}
+
+/* Layout
+=================================== */
+#navbar, #main-doc {
+  padding: 3rem;
+}
+
+#navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: gainsboro;
+  background: url("https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2602&q=50") no-repeat center;
+  background-size: cover;
+  color: #333;
+}
+#navbar header {
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+#navbar header img {
+  max-width: 100px;
+}
+#navbar ul li {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+#navbar ul li a {
+  color: inherit;
+  text-decoration: inherit;
+}
+#navbar ul li a:hover {
+  font-weight: 600;
+}
+#navbar ul li:not(:last-child) {
+  border-bottom: 1px solid #b4b4b4;
+}
+
+#main-doc {
+  margin-left: 320px;
+}
+#main-doc section {
+  max-width: 920px;
+}
+#main-doc section header {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #b4b4b4;
+}
+#main-doc a {
+  color: #0083ee;
+}
+#main-doc a:hover {
+  color: #0062b3;
+}
+#main-doc section:not(:last-child) {
+  margin-bottom: 3rem;
+}
+#main-doc ul li span {
+  font-weight: 500;
+  min-width: 300px;
+  display: inline-block;
+}
+#main-doc .list p {
+  text-indent: -17px;
+  margin-left: 17px;
+}
+
+figure {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+figcaption {
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+
+/* Typography
+=================================== */
+h1 {
+  font-size: calc(8rem/2);
+}
+
+h2 {
+  font-size: calc(5rem/2);
+}
+
+h3 {
+  font-size: calc(3rem/2);
+}
+
+h4 {
+  font-size: calc(2rem/2);
+}
+
+h5 {
+  font-size: calc(1rem/2);
+}
+
+h6 {
+  font-size: calc(1rem/2);
+}
+
+code {
+  padding: 3rem;
+  display: inline-block;
+  background: whitesmoke;
+  color: #333;
+  margin: 3rem;
+}
+
+/* Media
+=================================== */
+@media (max-width: 991px) {
+  #navbar, #main-doc {
+    padding: 1.5rem;
+  }
+
+  #navbar {
+    position: relative;
+    height: auto;
+    width: 100%;
+    text-align: center;
+  }
+  #navbar ul li {
+    justify-content: center;
+  }
+
+  #main-doc {
+    margin: 0;
+  }
+  #main-doc section {
+    max-width: 100%;
+  }
+  #main-doc ul li {
+    font-size: 1.3rem;
+  }
+  #main-doc ul li:not(:last-of-type), #main-doc ul li:not(:first-of-type) {
+    margin: 0.5rem 0;
+  }
+  #main-doc ul li span {
+    font-weight: 500;
+    min-width: 230px;
+    display: inline;
+  }
+
+  code {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
